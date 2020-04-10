@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "chrome",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "debug-start",
+      "postDebugTask": "debug-stop",
+      "url": "http://localhost:3000",
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/node_modules/**",
+        "bootstrap"
+      ]
+    },
+    {
+      "name": "edge",
+      "type": "edge",
+      "request": "launch",
+      "preLaunchTask": "debug-start",
+      "postDebugTask": "debug-stop",
+      "url": "http://localhost:3000",
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/node_modules/**",
+        "bootstrap"
+      ]
+    },
+    {
+      "type": "node",
+      "name": "vscode-jest-tests",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/react-scripts",
+      "args": ["test", "--env=jsdom", "--runInBand"],
+      "cwd": "${workspaceFolder}",
+      "protocol": "inspector",
+      "disableOptimisticBPs": true,
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/node_modules/**",
+        "bootstrap"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "javascript.implicitProjectConfig.checkJs": true,
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true }
+}
